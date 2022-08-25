@@ -61,7 +61,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  width: 100%;
 }
 
 .no-scroll {
@@ -123,11 +122,11 @@ img {
 .header-container {
   min-height: 60px;
   padding: 0 10px 0 15px;
+  display: flex;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .header-container {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
   }
 }
@@ -148,10 +147,12 @@ img {
 .navigation {
   margin-left: 93px;
 }
-
-.navigation__list {
-  display: none;
+@media screen and (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
 }
+
 @media screen and (min-width: 768px) {
   .navigation__list {
     display: flex;
@@ -254,6 +255,7 @@ img {
 .menu-open {
   display: block;
   margin-left: auto;
+  margin-right: 5px;
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -278,6 +280,8 @@ img {
   background-color: #ffffff;
   top: 0;
   padding: 10px 0;
+  transform: translateX(0);
+  transition: transform var(--transition-duration-main) var(--transition-timing-function-main);
 }
 .mob-menu > .container {
   display: flex;
@@ -285,6 +289,10 @@ img {
   height: 100%;
   justify-content: space-between;
   overflow: auto;
+}
+
+.mob-menu.is-hidden {
+  transform: translateX(-100%);
 }
 
 .menu-close {
@@ -388,23 +396,38 @@ img {
   padding-bottom: 118px;
   max-width: 480px;
   margin: 0 auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 480px, cover;
+  background-size: cover;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .banner {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner-mob-2x.jpg);
+  }
 }
 @media screen and (min-width: 768px) {
   .banner {
     max-width: 768px;
-    background-size: 768px, cover;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner-tab.jpg);
   }
 }
-@media screen and (min-width: 768px) and (min-width: 1200px) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .banner {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner-tab-2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
   .banner {
     padding-top: 200px;
     padding-bottom: 200px;
     max-width: 1600px;
-    background-size: cover;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .banner {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner-2x.jpg);
   }
 }
 
