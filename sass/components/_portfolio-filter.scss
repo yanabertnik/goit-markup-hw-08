@@ -1,0 +1,43 @@
+.portfolio-filter {
+  background-color: var(--main-background-color);
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+
+.portfolio-filter__btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: inherit;
+  background: var(--second-background-color);
+  cursor: pointer;
+  border-radius: 4px;
+  border: transparent;
+  padding: 6px 22px;
+  transition: color var(--transition-duration-main)
+      var(--transition-timing-function-main),
+    background-color var(--transition-duration-main)
+      var(--transition-timing-function-main),
+    box-shadow var(--transition-duration-main)
+      var(--transition-timing-function-main);
+  &:hover,
+  &:focus {
+    color: var(--main-title-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+}
