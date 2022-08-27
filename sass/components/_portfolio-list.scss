@@ -53,12 +53,21 @@
   letter-spacing: 0.03em;
   color: var(--main-title-color);
   background-color: rgba(33, 150, 243, 0.9);
-  padding: 63px 24px;
+  padding: 24px 24px;
   transform: translateY(100%);
   transition: transform var(--transition-duration-main)
     var(--transition-timing-function-main);
   .portfolio-list__item:hover & {
     transform: translateY(0%);
+  }
+  @media screen and (max-width: 380px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 49px 24px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 63px 24px;
   }
 }
 

@@ -394,7 +394,6 @@ img {
   background-color: var(--accent-background-color);
   padding-top: 118px;
   padding-bottom: 118px;
-  max-width: 480px;
   margin: 0 auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner-mob.jpg);
   background-repeat: no-repeat;
@@ -408,7 +407,6 @@ img {
 }
 @media screen and (min-width: 768px) {
   .banner {
-    max-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner-tab.jpg);
   }
 }
@@ -812,12 +810,27 @@ img {
   letter-spacing: 0.03em;
   color: var(--main-title-color);
   background-color: rgba(33, 150, 243, 0.9);
-  padding: 63px 24px;
+  padding: 24px 24px;
   transform: translateY(100%);
   transition: transform var(--transition-duration-main) var(--transition-timing-function-main);
 }
 .portfolio-list__item:hover .portfolio-list__top-text {
   transform: translateY(0%);
+}
+@media screen and (max-width: 380px) {
+  .portfolio-list__top-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio-list__top-text {
+    padding: 49px 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-list__top-text {
+    padding: 63px 24px;
+  }
 }
 
 .portfolio-list__wrap-text {
@@ -1095,7 +1108,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  min-height: 609px;
+  min-height: 581px;
   background-color: var(--main-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1110,7 +1123,6 @@ img {
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
-    min-height: 581px;
   }
 }
 
@@ -1138,6 +1150,11 @@ img {
 
 .form {
   padding: 40px;
+}
+@media screen and (max-width: 379px) {
+  .form {
+    padding: 40px 20px;
+  }
 }
 
 .form-title {
@@ -1227,11 +1244,21 @@ img {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
+@media screen and (max-width: 379px) {
+  .form-coment {
+    height: 100px;
+  }
+}
 
 .form-check {
   height: 24px;
   margin-top: 20px;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 379px) {
+  .form-check {
+    margin-bottom: 15px;
+  }
 }
 
 .check-label {
@@ -1239,7 +1266,7 @@ img {
   align-items: center;
   justify-content: center;
   align-items: center;
-  font-size: 7px;
+  font-size: 9px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--second-title-color);
@@ -1318,4 +1345,9 @@ img {
   margin: 30px auto 0px auto;
   min-width: 200px;
   min-height: 50px;
+}
+@media screen and (max-width: 379px) {
+  .check-btn {
+    margin: 0px auto;
+  }
 }/*# sourceMappingURL=main.css.map */
